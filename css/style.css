@@ -14,12 +14,33 @@
     /* <--- END MAIN ---> */
 
     /* <--- START FOOTER ---> */
+    footer{
+        width: 100%;
+        height: 100px;
+        background-color: #282828;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .left, footer .central, footer .right{
+        width: calc(96% /3);
+    }
+
     /* <--- END FOOTER ---> */
 
     /* <--- START DEBUG ---> */
     .debug{ 
         background-color: lightgreen;
     }
+
+    .debug footer .left, .debug footer .central, .debug footer .right{
+        background-color: coral;
+        height: 80px;
+    }
+
+
+
     /* <--- END DEBUG ---> */
 
 
