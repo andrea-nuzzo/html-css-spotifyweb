@@ -11,6 +11,29 @@
 
 /* XS */
     /* <--- START MAIN ---> */
+    main{
+        width: 100%;
+        display: flex;
+    }
+    main .column-menu{
+        background-color: black;
+    }
+
+    main .column-menu img{
+        width: 20px;
+        padding: 2px;
+    }
+
+    main .column-nav{
+
+        /* **** da eliminare **** */
+        flex-grow: 2;
+        /* ********************** */
+
+
+        background-color: #151921;
+    }
+
     /* <--- END MAIN ---> */
 
     /* <--- START FOOTER ---> */
@@ -36,6 +59,10 @@
     /* <--- START DEBUG ---> */
     .debug{ 
         background-color: lightgreen;
+    }
+
+    .debug main{
+        height: 1080px;
     }
 
     .debug footer .left, .debug footer .right{
