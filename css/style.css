@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;}
 
+
+main{
+    font-family: Arial, Helvetica, sans-serif;
+}
+    
 /* <---  END COMMON ---> */
 
 
@@ -15,15 +20,19 @@
         width: 100%;
         display: flex;
     }
+
+    /*  Start Column Menu */
     main .column-menu{
         background-color: black;
     }
 
     main .column-menu img{
-        width: 20px;
-        padding: 2px;
+        width: 30px;
+        margin: 10px;
     }
+    /*  End Column Menu */
 
+    /*  Start Column Nav */
     main .column-nav{
 
         /* **** da eliminare **** */
@@ -34,8 +43,31 @@
         background-color: #151921;
     }
 
+    main .column-nav .upgrade{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    main .column-nav .upgrade .btn{
+        display: inline;
+        text-transform: uppercase;
+        color: white;
+        border: 1px solid white;
+        border-radius:  2em;
+        padding: 10px 30px 10px 30px;
+        font-size: 10px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    /*  End Column Nav */
+
     /* <--- END MAIN ---> */
 
+    
     /* <--- START FOOTER ---> */
     footer{
         width: 100%;
@@ -53,7 +85,6 @@
     footer .central{
         flex-grow: 2;
     }
-
     /* <--- END FOOTER ---> */
 
     /* <--- START DEBUG ---> */
@@ -63,6 +94,10 @@
 
     .debug main{
         height: 1080px;
+    }
+
+    main .column-nav .upgrade{
+        height: 100px;
     }
 
     .debug footer .left, .debug footer .right{
