@@ -23,8 +23,12 @@
         align-items: center;
     }
 
-    footer .left, footer .central, footer .right{
-        width: calc(96% /3);
+    footer .left, footer .right{
+        flex-grow: 1;
+    }
+
+    footer .central{
+        flex-grow: 2;
     }
 
     /* <--- END FOOTER ---> */
@@ -34,8 +38,13 @@
         background-color: lightgreen;
     }
 
-    .debug footer .left, .debug footer .central, .debug footer .right{
+    .debug footer .left, .debug footer .right{
         background-color: coral;
+        height: 80px;
+    }
+
+    .debug footer .central{
+        background-color: cornflowerblue;
         height: 80px;
     }
 
