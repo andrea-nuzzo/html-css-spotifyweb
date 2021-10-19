@@ -9,6 +9,12 @@ main{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.small-gray{
+    color: gray;
+    font-size: 9px;
+    font: bold;
+}
+
 /* <---  END COMMON ---> */
 
 
@@ -18,6 +24,8 @@ main{
     /* <--- START MAIN ---> */
     main{
         width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
         display: flex;
     }
 
@@ -47,7 +55,7 @@ main{
     }
 
      main .column-menu .user-profile img{
-         background-color: #a3a3a3;
+         background-color: gray;
          border-radius: 50%;
      }
 
@@ -63,7 +71,7 @@ main{
     /*  End Column Menu */
 
     /*  Start Column Nav */
-    main .column-nav{
+    .column-nav{
 
         /* **** da eliminare **** */
         flex-grow: 2;
@@ -73,7 +81,7 @@ main{
         background-color: #151921;
     }
 
-    main .column-nav .upgrade{
+    .column-nav .upgrade{
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         display: flex;
@@ -81,16 +89,84 @@ main{
         align-items: center;
     }
 
-    main .column-nav .upgrade .btn{
+    .column-nav .upgrade .btn{
         display: inline;
         text-transform: uppercase;
         color: white;
         border: 1px solid white;
         border-radius:  2em;
         padding: 10px 30px 10px 30px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
         margin-right: 20px;
+    }
+
+    .column-nav .nav-search-music nav{
+        text-transform: uppercase;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .column-nav .nav-search-music nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .column-nav .nav-search-music nav ul li{
+        list-style: none;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .column-nav .nav-search-music nav ul li:first-child{
+        border-bottom: 2px solid greenyellow
+    }
+
+    .column-nav h3{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .column-nav .title-box{
+        width: 120px;
+        text-align: center;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        
+    }
+
+    .column-nav .album-box img{
+        width: 120px;
+    }
+
+    .column-nav .artist-box img{
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    .column-nav .recently-played{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .column-nav .created-for{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column-nav .most-popular-artists{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .album-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /*  End Column Nav */
@@ -104,6 +180,10 @@ main{
         height: 100px;
         background-color: #282828;
         display: flex;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
         justify-content: space-around;
         align-items: center;
     }
@@ -122,12 +202,6 @@ main{
 /* S */
 @media screen and (min-width: 576px) {
     /* <--- START MAIN ---> */
-
-    main .column-menu{
-        color: #a3a3a3;
-        font-size: 12px;
-        font-weight: bold;
-    }
 
     #icon-spotify{
         display: none;
@@ -166,7 +240,7 @@ main{
     }
 
     #plus{
-        background-color: #a3a3a3;
+        background-color: gray;
         color: black;
         font-size: 20px;
         padding: 1px 6px ;
@@ -179,6 +253,9 @@ main{
         margin-top: 15px;
     }
 
+    main .playlist nav{
+        overflow: scroll;
+    }
     main .playlist ul li{
         list-style: none;
         margin-top: 15px;
@@ -210,12 +287,12 @@ main{
 
 
 
-.debug{
+/* .debug{
     background-color: lightgreen;
-}
+} */
 
 .debug main{
-    height: 1080px;
+    height: 100%;
 }
 
 main .column-nav .upgrade{
