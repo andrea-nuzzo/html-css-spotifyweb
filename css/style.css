@@ -24,12 +24,42 @@ main{
     /*  Start Column Menu */
     main .column-menu{
         background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
     }
 
     main .column-menu img{
-        width: 30px;
-        margin: 10px;
+        width: 25px;
+        margin: 5px;
     }
+     main .column-menu .search, main .column-menu .library, main .column-menu .download{
+        filter: invert(71%) sepia(13%) saturate(12%) hue-rotate(357deg) brightness(89%) contrast(94%);
+     }
+
+     main .column-menu .download{
+         text-align: center;
+     }
+
+     main .column-menu .download img{
+         width: 15px;
+    }
+
+     main .column-menu .user-profile img{
+         background-color: gray;
+         border-radius: 50%;
+     }
+    
+
+    #logo-spotify{
+       display: none;
+    }
+    main .column-menu span, main .column-menu .playlist{
+        display: none;
+    }
+
+
     /*  End Column Menu */
 
     /*  Start Column Nav */
@@ -87,48 +117,40 @@ main{
     }
     /* <--- END FOOTER ---> */
 
-    /* <--- START DEBUG ---> */
-    .debug{ 
-        background-color: lightgreen;
-    }
-
-    .debug main{
-        height: 1080px;
-    }
-
-    main .column-nav .upgrade{
-        height: 100px;
-    }
-
-    .debug footer .left, .debug footer .right{
-        background-color: coral;
-        height: 80px;
-    }
-
-    .debug footer .central{
-        background-color: cornflowerblue;
-        height: 80px;
-    }
-
-
-
-    /* <--- END DEBUG ---> */
 
 
 /* S */
 @media screen and (min-width: 576px) {
     /* <--- START MAIN ---> */
+
+    main .column-menu{
+        color: #a3a3a3;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    #icon-spotify{
+        display: none;
+    }
+
+    #logo-spotify{
+        display: inline-block;
+        width: 120px;
+        margin: 20px 50px 20px 5px;
+    }
+
+    main .column-menu .home, main .column-menu .search, main .column-menu .library,main .column-menu .download, main .column-menu .user-profile{
+        display: flex;
+        align-items: center;
+    }
+
+    main .column-menu span, main .column-menu .playlist{
+        display: inline;
+    }
     /* <--- END MAIN ---> */
 
     /* <--- START FOOTER ---> */
     /* <--- END FOOTER ---> */
-
-    /* <--- START DEBUG ---> */
-    .debug{
-        background-color: lightpink;
-    }
-    /* <--- END DEBUG ---> */
-
 }
 
 /* M */
@@ -138,13 +160,6 @@ main{
 
     /* <--- START FOOTER ---> */
     /* <--- END FOOTER ---> */
-
-    /* <--- START DEBUG ---> */
-    .debug{
-        background-color: lightskyblue;
-    }
-    /* <--- END DEBUG ---> */
-
 }
 
 /* L */
@@ -154,11 +169,36 @@ main{
 
     /* <--- START FOOTER ---> */
     /* <--- END FOOTER ---> */
-
-    /* <--- START DEBUG ---> */
-    .debug{
-        background-color: lightsalmon;
-    }
-    /* <--- END DEBUG ---> */
 }
 
+
+
+.debug{ 
+    background-color: lightgreen;
+}
+
+.debug main{
+    height: 1080px;
+}
+
+main .column-nav .upgrade{
+    height: 100px;
+}
+
+.debug footer .left, .debug footer .right{
+    background-color: coral;
+    height: 80px;
+}
+
+.debug footer .central{
+    background-color: cornflowerblue;
+    height: 80px;
+}
+
+.debug main .column-menu img{
+    border: 1px solid red;
+}
+
+.debug .logo, .debug .home, .debug .search, .debug .library, .debug .playlist, .debug .download, .debug .user-profile {
+    border: 1px solid tomato;
+}
