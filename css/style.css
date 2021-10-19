@@ -1,5 +1,72 @@
-/* <--- COMMON ---> */
+/* <---  START COMMON ---> */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;}
+
+/* <---  END COMMON ---> */
+
+
+
+
+/* XS */
+    /* <--- START MAIN ---> */
+    /* <--- END MAIN ---> */
+
+    /* <--- START FOOTER ---> */
+    /* <--- END FOOTER ---> */
+
+    /* <--- START DEBUG ---> */
+    .debug{ 
+        background-color: lightgreen;
+    }
+    /* <--- END DEBUG ---> */
+
+
+/* S */
+@media screen and (min-width: 576px) {
+    /* <--- START MAIN ---> */
+    /* <--- END MAIN ---> */
+
+    /* <--- START FOOTER ---> */
+    /* <--- END FOOTER ---> */
+
+    /* <--- START DEBUG ---> */
+    .debug{
+        background-color: lightpink;
+    }
+    /* <--- END DEBUG ---> */
+
+}
+
+/* M */
+@media screen and (min-width: 768px) {
+    /* <--- START MAIN ---> */
+    /* <--- END MAIN ---> */
+
+    /* <--- START FOOTER ---> */
+    /* <--- END FOOTER ---> */
+
+    /* <--- START DEBUG ---> */
+    .debug{
+        background-color: lightskyblue;
+    }
+    /* <--- END DEBUG ---> */
+
+}
+
+/* L */
+@media screen and (min-width: 992px) {
+    /* <--- START MAIN ---> */
+    /* <--- END MAIN ---> */
+
+    /* <--- START FOOTER ---> */
+    /* <--- END FOOTER ---> */
+
+    /* <--- START DEBUG ---> */
+    .debug{
+        background-color: lightsalmon;
+    }
+    /* <--- END DEBUG ---> */
+}
+
