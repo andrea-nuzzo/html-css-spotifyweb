@@ -24,149 +24,140 @@ main{
     /* <--- START MAIN ---> */
     main{
         width: 100%;
+        height: calc(100vh - 100px);
         overflow: hidden;
-        overflow-y: scroll;
         display: flex;
     }
 
     /*  Start Column Menu */
-    main .column-menu{
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: start;
-    }
+    /* ----> Altezze e posizionamenti colonna menu */
+        .column-menu{
+            width: 50px;
+            height: 100%;
+            min-height: 250px;
+            background-color: black;            flex-direction: column;
+        }
+        .column-menu-up {
+            height: calc(100% - 80px);
+        }
+        .column-menu-down {
+            height: 80px;
+        }
+    /* ----> Grandezza immagini e colori Colonna menu*/
+        .column-menu img{
+            width: 25px;
+        }
+        .column-menu .download img{
+            width: 15px;
+        }
+        .column-menu .search, .column-menu .library, .column-menu .download{
+            filter: invert(71%) sepia(13%) saturate(12%) hue-rotate(357deg) brightness(89%) contrast(94%);
+        }
+        .column-menu .user-profile img{
+            background-color: gray;
+            border-radius: 50%;
+        }
 
-    main .column-menu img{
-        width: 25px;
-        margin: 5px;
-    }
-     main .column-menu .search, main .column-menu .library, main .column-menu .download{
-        filter: invert(71%) sepia(13%) saturate(12%) hue-rotate(357deg) brightness(89%) contrast(94%);
-     }
-
-     main .column-menu .download{
-         text-align: center;
-     }
-
-     main .column-menu .download img{
-         width: 15px;
-    }
-
-     main .column-menu .user-profile img{
-         background-color: gray;
-         border-radius: 50%;
-     }
-
-
-    #logo-spotify{
-       display: none;
-    }
-    main .column-menu span, main .column-menu .playlist{
+    /* ----> Oggetti che devono sparire nella versione XS*/
+        #logo-spotify{
         display: none;
-    }
-
-
+        }
+        .column-menu span, .column-menu .playlist{
+        display: none;
+        }
     /*  End Column Menu */
 
     /*  Start Column Nav */
     .column-nav{
-
-        /* **** da eliminare **** */
-        flex-grow: 2;
-        /* ********************** */
-
-
+        width: calc(100% - 50px);
+        height: 100%;
         background-color: #151921;
+        overflow-y: scroll ;
     }
+    /* ---> Pare superiore con bottone upgrade */
+        .column-nav .upgrade{
+            width: calc(100% - 50px);
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .column-nav .upgrade .btn{
+            display: inline;
+            text-transform: uppercase;
+            color: white;
+            border: 1px solid white;
+            border-radius:  2em;
+            padding: 10px 30px 10px 30px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+    /* ---> Container per sezione che scorre */
+        .scroll{
+            margin-top: 100px;
+            padding: 20px;
+        }
+    /* ---> Barra di navigazione ricerca Musica */
+        .nav-search-music nav{
+            text-transform: uppercase;
+        }
+        .nav-search-music nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .nav-search-music nav ul li{
+            list-style: none;
+            margin-right: 15px;
+            margin-bottom: 30px;
+        }
+        .nav-search-music nav ul li:first-child{
+            border-bottom: 2px solid greenyellow
+        }
+        /* --->Playlist */
+        .title-playlist{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin:20px 0;
+        }
 
-    .column-nav .upgrade{
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: end;
-        align-items: center;
-    }
-
-    .column-nav .upgrade .btn{
-        display: inline;
-        text-transform: uppercase;
-        color: white;
-        border: 1px solid white;
-        border-radius:  2em;
-        padding: 10px 30px 10px 30px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-right: 20px;
-    }
-
-    .column-nav .nav-search-music nav{
-        text-transform: uppercase;
-        margin: 20px 20px 0px 20px;
-    }
-
-    .column-nav .nav-search-music nav ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .column-nav .nav-search-music nav ul li{
-        list-style: none;
-        margin-right: 15px;
-        margin-bottom: 30px;
-    }
-
-    .column-nav .nav-search-music nav ul li:first-child{
-        border-bottom: 2px solid greenyellow
-    }
-
-    .column-nav h3{
-        color: white;
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .column-nav .title-box{
-        width: 120px;
-        text-align: center;
-        color: white;
-        font-size: 11px;
-        font-weight: bold;
-        
-    }
-
-    .column-nav .album-box img{
-        width: 120px;
-    }
-
-    .column-nav .artist-box img{
-        width: 150px;
-        border-radius: 50%;
-    }
-
-    .column-nav .recently-played{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-    }
-
-    .column-nav .created-for{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .column-nav .most-popular-artists{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .album-box{
+        .recently-played, .created-for, .most-popular-artists{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    /* --->Immagini Plaulist */
+        .column-nav .album-box img{
+            width: 180px;
+        }
+        .column-nav .artist-box img{
+            width: 150px;
+            border-radius: 50%;
+        }
+    /* --->Titolo Immagini */
+        .column-nav .title-box{
+            width: 120px;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    .album-box, .artist-box{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .album-box span, .artist-box span{
+        margin-bottom: 20px;
     }
 
     /*  End Column Nav */
@@ -180,10 +171,6 @@ main{
         height: 100px;
         background-color: #282828;
         display: flex;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 3;
         justify-content: space-around;
         align-items: center;
     }
@@ -203,6 +190,7 @@ main{
 @media screen and (min-width: 576px) {
     /* <--- START MAIN ---> */
 
+    
     #icon-spotify{
         display: none;
     }
@@ -211,6 +199,10 @@ main{
         display: inline-block;
         width: 120px;
         margin: 20px 50px 20px 15px;
+    }
+
+    main .column-menu{
+        width: 150px;
     }
 
     main .column-menu .home, main .column-menu .search, main .column-menu .library,main .column-menu .download, main .column-menu .user-profile{
@@ -261,6 +253,10 @@ main{
         margin-top: 15px;
     }
 
+
+    .column-nav .upgrade{
+        width: calc(100% - 150px);
+    }
     /* <--- END MAIN ---> */
 
     /* <--- START FOOTER ---> */
@@ -287,32 +283,15 @@ main{
 
 
 
-/* .debug{
-    background-color: lightgreen;
-} */
 
-.debug main{
-    height: 100%;
-}
 
-main .column-nav .upgrade{
-    height: 100px;
-}
 
 .debug footer .left, .debug footer .right{
     background-color: coral;
     height: 80px;
 }
 
-.debug footer .central{
+.debug footer .central {
     background-color: cornflowerblue;
     height: 80px;
-}
-
-.debug main .column-menu img{
-    /* border: 1px solid red; */
-}
-
-.debug .logo, .debug .home, .debug .search, .debug .library, .debug .playlist, .debug .download, .debug .user-profile {
-    /* border: 1px solid tomato; */
 }
