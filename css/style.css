@@ -184,27 +184,35 @@ body{
         z-index: 3;
         background-color: #282828;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     /* ---> Footer Left */
-    .left, .right{
-        flex-grow: 1;
-    }
-    .central{
-        flex-grow: 2;
-    }
+
     .left{
         display: flex;
-        justify-content: space-around;
         align-items: center;
+        width: 25%;
+        max-width: 200px;
+        height: 100%;
     }
     .left img{
         width: 30px;
+        margin: 0px 5px 0px 5px ;
     }
-    .left .song-in-play span, .reaction-song i{
+    .song-in-play, .reaction-song {
         color: gray;
-        display: block;
+        display: flex;
+    }
+    .song-in-play{
+        flex-direction: column;
+        width: 50%;
+    }
+    .reaction-song{
+        flex-wrap: wrap;
+    }
+    .fa-heart{
+        margin-right: 10px;
     }
     .left .song-in-play span{
         font-weight: bold;
@@ -215,20 +223,57 @@ body{
         font-size: 10px;
     }
     /* ---> Footer Central */
-    .central .btn-song, .time-song{
+    .central{
+        width: 50%;
+        max-width: 350px;
+        padding: 20px;
+    }
+    .central .btn-song, .time-song, .right{
         color: white;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
-
-    .time-song .time{
+    .btn-song{
+        margin-bottom: 15px;
+    }
+    .btn-song i{
+        margin-right: 20px;
+    }
+    .fa-play-circle{
+        font-size: 30px;
+    }
+    .minutes {
+        font-weight: bold;
+        font-size: 10px;
+    }
+    .time-song .time , .turn-up{
         background-color: gray;
         margin: 0px 5px;
         height: 3px;
         width: 100%;
         border-radius: 5px;
     }
+
+    .time-white, .turn-up-white{
+        background-color: white;
+        height: 3px;
+        width: 20%;
+        border-radius: 5px;
+    }
+    /* ---> Footer Right */
+    .right{
+        width: 25%;
+        max-width: 200px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .right i{
+        margin-right: 10px;
+    }
+
     /* <--- END FOOTER ---> */
 
 
