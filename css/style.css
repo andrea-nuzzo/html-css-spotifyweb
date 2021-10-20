@@ -34,15 +34,25 @@ main{
         .column-menu{
             width: 50px;
             height: 100%;
-            min-height: 250px;
-            background-color: black;            flex-direction: column;
+            min-height: 400px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
         }
         .column-menu-up {
             height: calc(100% - 80px);
+            margin-top: 10px;
+            justify-content: flex-start;
         }
         .column-menu-down {
             height: 80px;
+            justify-content: flex-end;
         }
+        .column-menu-down, .column-menu-up{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
     /* ----> Grandezza immagini e colori Colonna menu*/
         .column-menu img{
             width: 25px;
@@ -150,18 +160,18 @@ main{
             margin-top: 10px;
             margin-bottom: 5px;
         }
-    .album-box, .artist-box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .album-box span, .artist-box span{
-        margin-bottom: 20px;
-    }
+    /* ---> Posionamento scritte e immagini Box */
+        .album-box, .artist-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        .album-box span, .artist-box span{
+            margin-bottom: 20px;
+        }
     /*  End Column Nav */
-
     /* <--- END MAIN ---> */
 
 
@@ -169,6 +179,9 @@ main{
     footer{
         width: 100%;
         height: 100px;
+        position: fixed;
+        bottom: 0;
+        z-index: 3;
         background-color: #282828;
         display: flex;
         justify-content: space-around;
@@ -190,73 +203,102 @@ main{
 @media screen and (min-width: 576px) {
     /* <--- START MAIN ---> */
 
-    
-    #icon-spotify{
-        display: none;
-    }
 
-    #logo-spotify{
-        display: inline-block;
-        width: 120px;
-        margin: 20px 50px 20px 15px;
-    }
+      /*  Start Column Menu */
+        .column-menu{
+            width: 200px;
+        }
+        .column-menu-down, .column-menu-up {
+            align-items: flex-start;
+        }
 
-    main .column-menu{
-        width: 150px;
-    }
+        #icon-spotify{
+            display: none;
+        }
+        #logo-spotify{
+            display: inline-block;
+            width: 120px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+        .column-menu .home, .column-menu .search, .column-menu .library{
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            margin-bottom: 5px;
 
-    main .column-menu .home, main .column-menu .search, main .column-menu .library,main .column-menu .download, main .column-menu .user-profile{
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-    }
-    main .column-menu .home{
-        color: white;
-        border-left: 5px solid #a6db4f;
-    }
+        }
+        .column-menu .home{
+            color: white;
+            border-left: 2px solid greenyellow;
+            font-size: 9px;
+            font-weight: bold;
+        }
+        .column-menu span, .column-menu .playlist{
+            display: inline-block;
+        }
+        .column-menu .playlist{
+            width: 100%;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        .column-menu .playlist h3{
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+        }
+        .column-menu .playlist span.small-gray{
+            font-size: 12px;
+        }
+        .column-menu #plus{
+            background-color: gray;
+            color: black;
+            font-size: 20px;
+            padding: 1px 6px ;
+            margin-right: 10px;
+        }
+        .column-menu .create-playlist{
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .column-menu .playlist ul li{
+            list-style: none;
+            margin-top: 15px;
+        }
+        .column-menu .download, .column-menu .user-profile{
+            display: flex;
+            align-items: center;
+        }
+        .column-menu .download{
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+        .column-menu .user-profile{
+            margin-left:10px;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            border-top: 1px solid gray;
+        }
+        .column-menu .user-profile span{
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            margin-left: 5px;
+        }
 
-    main .column-menu span, main .column-menu .playlist{
-        display: inline-block;
-    }
+        .column-menu .home span, .column-menu .search span, .column-menu .library span, .column-menu .download span{
+            margin-left: 5px;
+        } 
+        /*  End Column Menu */
 
-    main .playlist{
-        width: 100%;
-        margin-left: 15px;
-        margin-top: 15px;
-    }
-
-    main .playlist h3{
-        text-transform: uppercase;
-        font-weight: bold;
-        color: white;
-    }
-
-    #plus{
-        background-color: gray;
-        color: black;
-        font-size: 20px;
-        padding: 1px 6px ;
-        margin-right: 10px;
-    }
-    main .create-playlist{
-        display: inline-flex;
-        align-items: center;
-        font-size: 14px;
-        margin-top: 15px;
-    }
-
-    main .playlist nav{
-        overflow: scroll;
-    }
-    main .playlist ul li{
-        list-style: none;
-        margin-top: 15px;
-    }
-
-
-    .column-nav .upgrade{
-        width: calc(100% - 150px);
-    }
+        /*  Start Column Nav */
+        .column-nav .upgrade{
+            width: calc(100% - 150px);
+        }
+        /*  End Column Nav */
     /* <--- END MAIN ---> */
 
     /* <--- START FOOTER ---> */
