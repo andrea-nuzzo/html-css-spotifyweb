@@ -81,6 +81,9 @@ body{
             filter: none;
             color: white;
         }
+        .download a{
+            color: gray;
+        }
     /* ----> Oggetti che devono sparire nella versione XS*/
         #logo-spotify{
         display: none;
