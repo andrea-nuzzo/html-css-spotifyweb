@@ -96,8 +96,7 @@ body{
             justify-content: end;
             align-items: center;
         }
-        .column-nav .upgrade .btn{
-            display: inline;
+        .column-nav .upgrade .btn a{
             text-transform: uppercase;
             color: white;
             border: 1px solid white;
@@ -105,7 +104,11 @@ body{
             padding: 10px 30px 10px 30px;
             font-size: 12px;
             font-weight: bold;
-            margin-right: 20px;
+            margin-right: 40px;
+            text-decoration: none;
+        }
+        .btn:hover{
+            transform: scale(1.2);
         }
     /* ---> Container per sezione che scorre */
         .scroll{
