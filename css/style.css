@@ -140,7 +140,7 @@ body{
         .recently-played, .created-for, .most-popular-artists{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: flex-start;
         }
     /* --->Immagini Plaulist */
         .column-nav .album-box img{
@@ -165,7 +165,9 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-right: 10px;
         }
+        
         .album-box span, .artist-box span{
             margin-bottom: 20px;
         }
