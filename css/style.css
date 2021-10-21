@@ -3,18 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;}
-
-
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .small-gray{
     color: gray;
     font-size: 10px;
     font: bold;
 }
-
 /* <---  END COMMON ---> */
 
 
@@ -28,7 +24,9 @@ body{
         overflow: hidden;
         display: flex;
     }
-
+    .column-menu a:hover{
+        color: white;
+    }
     /*  Start Column Menu */
     /* ----> Altezze e posizionamenti colonna menu */
         .column-menu{
@@ -68,6 +66,21 @@ body{
             border-radius: 50%;
         }
 
+        .column-menu a{
+           text-decoration: none;
+        }
+        .column-menu a:hover, .column-menu a:hover span {
+            filter: none;
+            color: white;
+        }
+        .create-playlist:hover #plus{
+            background-color: white;
+        }
+
+        .download:hover{
+            filter: none;
+            color: white;
+        }
     /* ----> Oggetti che devono sparire nella versione XS*/
         #logo-spotify{
         display: none;
@@ -140,8 +153,6 @@ body{
         .nav-search-music nav ul li a:hover {
            color: white;
         }
-
-
         /* --->Playlist */
         .title-playlist{
             color: white;
@@ -149,7 +160,6 @@ body{
             font-weight: bold;
             margin:20px 0;
         }
-
         .recently-played, .created-for, .most-popular-artists{
             display: flex;
             flex-wrap: wrap;
@@ -180,11 +190,9 @@ body{
             align-items: center;
             margin-right: 10px;
         }
-
         .album-box span, .artist-box span{
             margin-bottom: 20px;
         }
-
     /* ---> Layover Album */
     .layover{
         position: relative;
@@ -205,18 +213,12 @@ body{
         height: 100%;
         background-color: rgba(0, 0, 0, 0.4);
     }
-
     .layover-black, .layover i{
         display: none;
     }
-
     .album-box:hover .layover-black, .album-box:hover .layover i{
         display: flex ;
     }
-
-
-
-
     /*  End Column Nav */
     /* <--- END MAIN ---> */
 
@@ -256,7 +258,6 @@ body{
     #track-name{
         font-size: 10px;
     }
-
     .left a:hover{
         color: white;
     }
@@ -363,16 +364,12 @@ body{
     .right i{
         margin-right: 10px;
     }
-
     /* <--- END FOOTER ---> */
-
 
 
 /* S */
 @media screen and (min-width: 576px) {
     /* <--- START MAIN ---> */
-
-
       /*  Start Column Menu */
         .column-menu{
             width: 200px;
@@ -475,25 +472,4 @@ body{
         }
         /*  End Column Nav */
     /* <--- END MAIN ---> */
-
-    /* <--- START FOOTER ---> */
-    /* <--- END FOOTER ---> */
-}
-
-/* M */
-@media screen and (min-width: 768px) {
-    /* <--- START MAIN ---> */
-    /* <--- END MAIN ---> */
-
-    /* <--- START FOOTER ---> */
-    /* <--- END FOOTER ---> */
-}
-
-/* L */
-@media screen and (min-width: 992px) {
-    /* <--- START MAIN ---> */
-    /* <--- END MAIN ---> */
-
-    /* <--- START FOOTER ---> */
-    /* <--- END FOOTER ---> */
 }
