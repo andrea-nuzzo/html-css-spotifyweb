@@ -11,7 +11,7 @@ body{
 
 .small-gray{
     color: gray;
-    font-size: 9px;
+    font-size: 10px;
     font: bold;
 }
 
@@ -122,7 +122,7 @@ body{
         .nav-search-music nav ul{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
         }
         .nav-search-music nav ul li{
             list-style: none;
@@ -132,6 +132,16 @@ body{
         .nav-search-music nav ul li:first-child{
             border-bottom: 2px solid greenyellow
         }
+
+        .nav-search-music nav ul li a {
+            text-decoration: none;
+        }
+
+        .nav-search-music nav ul li a:hover {
+           color: white;
+        }
+
+
         /* --->Playlist */
         .title-playlist{
             color: white;
@@ -170,7 +180,7 @@ body{
             align-items: center;
             margin-right: 10px;
         }
-        
+
         .album-box span, .artist-box span{
             margin-bottom: 20px;
         }
@@ -195,7 +205,7 @@ body{
         height: 100%;
         background-color: rgba(0, 0, 0, 0.4);
     }
-   
+
     .layover-black, .layover i{
         display: none;
     }
@@ -203,10 +213,10 @@ body{
     .album-box:hover .layover-black, .album-box:hover .layover i{
         display: flex ;
     }
-   
 
 
-   
+
+
     /*  End Column Nav */
     /* <--- END MAIN ---> */
 
@@ -273,12 +283,19 @@ body{
     .btn-song{
         margin-bottom: 15px;
     }
-    .btn-song i{
+    .btn-song a{
         margin-right: 20px;
+        text-decoration: none;
+        color: white;
     }
     .fa-play-circle{
         font-size: 30px;
     }
+
+    .btn-song a .fa-play-circle:hover{
+        transform: scale(1.2);
+    }
+
     .minutes {
         font-weight: bold;
         font-size: 10px;
@@ -294,9 +311,39 @@ body{
     .time-white, .turn-up-white{
         background-color: white;
         height: 3px;
-        width: 20%;
+        width: 30%;
         border-radius: 5px;
+        position: relative;
     }
+
+    a .turn-up{
+        min-width: 60px;
+    }
+
+    .circle-time-volume{
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        background-color:white;
+        display: none;
+    }
+
+    a .time-white:hover, a .turn-up-white:hover{
+        background-color: greenyellow;
+    }
+
+    a .time-white:hover .circle-time-volume, a .turn-up-white:hover .circle-time-volume{
+        display: inline;
+    }
+
+
+
+
+
+
     /* ---> Footer Right */
     .right{
         width: 25%;
@@ -304,7 +351,7 @@ body{
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     .right i{
         margin-right: 10px;
@@ -412,7 +459,7 @@ body{
 
         .column-menu .home span, .column-menu .search span, .column-menu .library span, .column-menu .download span{
             margin-left: 5px;
-        } 
+        }
         /*  End Column Menu */
 
         /*  Start Column Nav */
