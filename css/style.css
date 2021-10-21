@@ -157,7 +157,7 @@ body{
         }
     /* --->Immagini Plaulist */
         .column-nav .album-box img{
-            width: 180px;
+            width: 150px;
         }
         .column-nav .artist-box img{
             width: 150px;
@@ -246,6 +246,23 @@ body{
         width: 30px;
         margin: 0px 5px 0px 5px ;
     }
+    .left a{
+        color: gray;
+        text-decoration: none;
+    }
+    .left a:hover{
+        color: white;
+    }
+    #track-name{
+        font-size: 10px;
+    }
+
+    .left a:hover{
+        color: white;
+    }
+    #track-name:hover{
+        text-decoration: underline;
+    }
     .song-in-play, .reaction-song {
         color: gray;
         display: flex;
@@ -315,11 +332,9 @@ body{
         border-radius: 5px;
         position: relative;
     }
-
     a .turn-up{
         min-width: 60px;
     }
-
     .circle-time-volume{
         position: absolute;
         right: 0;
@@ -330,20 +345,12 @@ body{
         background-color:white;
         display: none;
     }
-
     a .time-white:hover, a .turn-up-white:hover{
         background-color: greenyellow;
     }
-
     a .time-white:hover .circle-time-volume, a .turn-up-white:hover .circle-time-volume{
         display: inline;
     }
-
-
-
-
-
-
     /* ---> Footer Right */
     .right{
         width: 25%;
